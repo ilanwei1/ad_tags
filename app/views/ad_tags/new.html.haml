@@ -1,0 +1,10 @@
+.row
+	.col-lg-3.col-lg-push-4
+		.h1 Create AdTag
+		= simple_form_for @ad_tag ,:remote => true do |f|
+			= f.input :name
+			= f.input :size
+			= f.input :ip
+			= f.button :submit ,:disable_with => "Submitting…"
+		.ad-tag-json
+
