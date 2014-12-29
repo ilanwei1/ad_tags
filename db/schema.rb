@@ -14,11 +14,9 @@
 ActiveRecord::Schema.define(version: 20141228194510) do
 
   create_table "ad_tags", force: true do |t|
-    t.string   "ip"
-    t.string   "name"
-    t.string   "size"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "ip"
+    t.string "name"
+    t.string "size"
   end
 
 end

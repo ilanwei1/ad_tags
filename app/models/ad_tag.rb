@@ -1,3 +1,3 @@
 class AdTag < ActiveRecord::Base
-  validates :ip, presence: true
+  validates :ip,:size,:name, presence: true
 end

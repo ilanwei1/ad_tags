@@ -1,2 +1,5 @@
-$('.ad-tag-json').html("<%= j @ad_tag.to_json.html_safe %>");
-
+<% if @ad_tag.errors.blank? %>
+	$('.ad-tag-json').html("<%= j @ad_tag.to_json.html_safe %>");
+<%else %>
+	$('.ad-tag-json').html("<%= j @ad_tag.errors.full_messages.to_sentence%>");
+<%end%>

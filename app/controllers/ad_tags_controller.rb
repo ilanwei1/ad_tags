@@ -1,6 +1,7 @@
 class AdTagsController <  ApplicationController
 	skip_before_filter :verify_authenticity_token
-	respond_to :js,:json,:html
+	respond_to :js, only: :create
+	respond_to :html
 
 	def new
   	 @ad_tag = AdTag.new
@@ -12,7 +13,7 @@ class AdTagsController <  ApplicationController
 			IpConverterJob.perform_async(@ad_tag.id)
 			respond_with @ad_tag
 		else
-		  render "new"
+
 		end
 	end
 

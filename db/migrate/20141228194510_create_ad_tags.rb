@@ -4,7 +4,6 @@ class CreateAdTags < ActiveRecord::Migration
     	t.string  'ip'
     	t.string  'name'
     	t.string  'size'
-    	t.timestamps
     end
   end
 end
